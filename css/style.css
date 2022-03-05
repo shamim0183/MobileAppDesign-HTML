@@ -60,6 +60,8 @@ ONBOARING SECTION START
     color: #fff;
     line-height: 1.2;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 .label p span{
     color: #fff;
@@ -79,7 +81,7 @@ ONBOARING SECTION START
     row-gap: 28px;
 }
 .effect {
-    padding-top: 100vh;
+    padding-top: 84vh;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -105,6 +107,7 @@ button.fill-red-btn {
     padding: 16px 32px;
     border-radius: 10px;
     margin: 0 auto;
+    cursor: pointer;
 }
 .fill-red-btn i.fas.fa-arrow-right {
     margin-left: 12px;
@@ -113,4 +116,143 @@ button.fill-red-btn {
 
 /**
 ONBOARING SECTION END
+**/
+/**
+CREATE RECIPE SECTION START
+**/
+section.create-recipe-section {
+    padding-top: 20px;
+}
+.tdi_3 {
+    padding: 0 10px;
+    flex-direction: column;
+}
+.notifications {
+    width: 100%;
+    margin-bottom: 40px;
+}
+h4.notifications-title {
+    float: left;
+    font-size: 24px;
+    line-height: 1.2;
+}
+.notifications span {
+    float: right;
+}
+.fill-nocolor-btn{
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    background-color: #ffffff;
+    border-style: none;
+    color: #EE8B8B;
+    padding: 16px 32px;
+    border-radius: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    
+}
+.buttons button.fill-red-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    width: 83px;
+    margin: 0;
+}
+.buttons button.fill-nocolor-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    width: 83px;
+    margin: 0;
+}
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+p.recipe-date {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+p.recipe-content {
+    color: #A9A9A9;
+    font-size: 12px;
+    line-height: 1.2;
+    max-width: 80%;
+}
+.recipe-title h3.title {
+    font-size: 12px;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5px;
+}
+.recipe-notification {
+    display: flex;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background-color: #F1F1F1;
+    column-gap: 12px;
+    margin-bottom: 20px;
+}
+.title span {
+    font-size: 4em;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #E23E3E;
+}
+.recipes {
+    margin-bottom: 20px;
+}
+.tdi_4{
+    margin-bottom: 0;
+}
+.notification-bottom-text p {
+    color: #A9A9A9;
+    font-size: 10px;
+    line-height: 1.2;
+}
+/* .navigation ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} */
+.navigation {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rebeccapurple;
+    padding: 10px 0;
+}
+li.list:nth-child(1) {
+    margin-left: 0;
+}
+li.list {
+    float: left;
+    margin-left: 20px;
+}
+svg.small-icon {
+    width: 25px;
+    height: auto;
+}
+span.icon {
+    display: flex;
+}
+.navigation ul li a .icon{
+    transition: .5s ;
+}
+.navigation ul li:hover a .icon{
+    transform: translateY(-35px);
+    /* transition: .5s ease-in-out; */
+}
+/**
+CREATE RECIPE SECTION END
 **/
