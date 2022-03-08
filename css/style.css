@@ -4,6 +4,9 @@ font-family: 'Poppins', sans-serif;
 /**
 COMMON CSS
 **/
+img{
+    width: 100%;
+}
 *{
     margin: 0;
     
@@ -33,7 +36,7 @@ ul, li, a{
     color: #303030;
 }
 .container {
-    padding: 0 10px;
+    padding: 0 20px;
     
     /* max-height: 812px; */
 }
@@ -51,11 +54,49 @@ SPLASH SCREEN SECTION START
 **/
 .spalsh-screen {
     background-image: url(../image/Bgfood.png);
-    padding-top: 100vh;
     background-repeat: no-repeat;
+    height: calc(100vh - 0px);
     background-size: cover;
+    background-position: center;
 }
-
+.spalsh-screen .msg p {
+    color: #ffffff;
+    font-weight: 600;
+}
+.spalsh-screen .msg p span{
+    color: #ffffff;
+    margin-left: 5px;
+}
+.spalsh-screen .msg {
+    text-align: center;
+}
+.spalsh-screen .splash-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.splash-title h3 {
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.2;
+}
+.splash-title .splash-content p{
+    color: #ffffff;
+    
+}
+.spalsh-screen .row{
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 100vh;
+}
+.spalsh-screen .row {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    
+}
 /**
 SPLASH SCREEN SECTION END
 **/
@@ -64,6 +105,7 @@ NOTIFICATION SECTION START
 **/
 section.notification-section {
     padding-top: 20px;
+    background-color: #ffffff;
 }
 .tdi_3 {
     padding: 0 10px;
@@ -72,7 +114,7 @@ section.notification-section {
 }
 .notifications {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 h4.notifications-title {
     float: left;
@@ -88,34 +130,58 @@ h4.notifications-title {
     text-align: center;
     background-color: #ffffff;
     border-style: none;
-    color: #EE8B8B;
+    color: #E23E3E;
     padding: 16px 32px;
     border-radius: 10px;
     margin: 0 auto;
     cursor: pointer;
     
 }
+.fill-red-btn{
+    background-color: #E23E3E;
+    border-style: none;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 10px;
+    margin: 0 auto;
+    
+}
+.follow-author .fill-red-btn{
+    background-color: #E23E3E;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+.author-location {
+    display: flex;
+    align-items: center;
+}
 .buttons button.fill-red-btn {
     padding: 8px 12px;
     font-size: 12px;
     line-height: 1.2;
     font-weight: 600;
-    width: 83px;
+    width: 107px;
     margin: 0;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: ##E23E3E;
 }
 .buttons button.fill-nocolor-btn {
     padding: 8px 12px;
     font-size: 12px;
     line-height: 1.2;
     font-weight: 600;
-    width: 83px;
+    width: 107px;
     margin: 0;
+}
+.recipe-title.tdi_6 {
+    margin-bottom: 30px;
 }
 .buttons {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 p.recipe-date {
     font-size: 14px;
@@ -180,18 +246,19 @@ p.recipe-content {
     /* display: flex;
     align-items: center;
     justify-content: center; */
-    background-color: rebeccapurple;
+    background-color: #ffffff;
     padding: 10px 0;
-    position: absolute;
+    box-shadow: 0px -1px 8px rgba(108, 108, 108, 0.08);
     width: 100%;
+    position: static;
     /* bottom: 0; */
 }
-li.list:nth-child(1) {
+/* li.list:nth-child(1) {
     margin-left: 0;
-}
+} */
 li.list {
     float: left;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 svg.small-icon {
     width: 25px;
@@ -200,27 +267,48 @@ svg.small-icon {
 span.icon {
     display: flex;
 }
-.navigation ul li a .icon{
-    transition: .5s ;
-}
-.navigation ul li:hover a .icon{
-    /* opacity: 1; */
-    /* transition: .5s ease-in-out; */
-}
-.navigation ul li:hover a span.icon{
-    transform: translateY(-25px);
-    /* z-index: 1; */
-    /* transition: .5s ease-in-out; */
-}
-.navigation ul li:hover .indicator{
-    opacity: 1;
-    transform: translateY(-25px);
-    z-index: -1;
-    /* transition: .5s ease-in-out; */
-}
-.navigation ul {
+
+
+.red-bg{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    position: absolute;
+    top: -23px;
+    left: -16px;
+}
+span.icon.red-bg::before {
+    content: '';
+    position: absolute;
+    top: 36%;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    left: -22px;
+    border-top-right-radius: 20px;
+    box-shadow: 9px -7px 8px rgb(108 108 108 / 8%);
+}
+span.icon.red-bg::after {
+    content: '';
+    position: absolute;
+    top: 48%;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    right: -22px;
+    border-top-left-radius: 20px;
+    box-shadow: -7px -7px 8px rgb(108 108 108 / 8%);
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
 }
 li.list {
     position: relative;
@@ -248,10 +336,11 @@ RECIPE DETAILS SECTION START
 **/
 section.recipe-detail {
     padding-top: 20px;
+    background-color: #ffffff;
 }
-.recipe-details {
+/* .recipe-details {
     padding: 0 10px;
-}
+} */
 .navigation-arrow {
     display: flex;
     justify-content: space-between;
@@ -270,11 +359,19 @@ section.recipe-detail {
     background-size: cover;
     border-radius: 15px;
     margin-bottom: 20px;
+    background-position: center;
 }
 .play-button-icon {
     position: absolute;
     top: 34%;
     right: 43%;
+}
+a.play {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 span.rating-number {
     font-size: 14px;
@@ -376,6 +473,7 @@ DISCOVER RECIPE SECTION START
 **/
 .discover-section{
     padding-top: 20px;
+    background-color: #ffffff;
     
 }
 .save-recipes{
@@ -386,9 +484,9 @@ DISCOVER RECIPE SECTION START
 .save-recipe {
     margin-bottom: 15px;
 }
-.save-recipe:last-child {
+/* .save-recipe:last-child {
     margin-bottom: 0;
-}
+} */
 .save-recipes button.fill-nocolor-btn {
     width: 172px;
 }
@@ -449,6 +547,7 @@ i.fas.fa-play {
     justify-content: center;
     border-radius: 50%;
     align-items: center;
+    filter: drop-shadow(0px 8px 25px rgba(32, 32, 32, 0.15));
 }
 .recipe-bookmark i.fas.fa-bookmark {
     color: red;
@@ -477,6 +576,7 @@ i.fa.fa-ellipsis-h {
 .author-thumb {
     display: flex;
     align-items: center;
+    width: 50px;
 }
 .tdi_7 {
     align-items: center;
